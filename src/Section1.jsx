@@ -1,61 +1,36 @@
 import React, { useState } from "react";
 import bgImage from "./assets/image1.jpg";
 import visualImage from "./assets/image2.jpg";
+import { Link } from "react-router";
 
 const Section1 = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="relative w-full min-h-screen text-white font-sans overflow-x-hidden bg-black scroll-smooth">
       {/* Background Image */}
-      <img
+      {/* <img
         src={bgImage}
         alt="Background"
         className="absolute w-full h-full object-cover opacity-80 transition-opacity duration-1000"
-      />
+      /> */}
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+      {/* <div className="absolute inset-0 bg-black bg-opacity-10"></div> */}
 
-      {/* Navigation Bar */}
-      <div className="relative z-20 flex justify-between items-center p-6">
-        <h1 className="text-2xl font-bold tracking-wide transition-all duration-500 hover:scale-105 cursor-pointer">
-          AI VIDEO GENERATOR
-        </h1>
-        <button
-          className="text-white text-3xl font-bold focus:outline-none transition-transform duration-300 hover:scale-110"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          &#9776;
-        </button>
-      </div>
-
-      {/* Slide-in Sidebar Menu */}
-      <div
-        className={`fixed top-0 left-0 h-full w-72 bg-white text-black z-50 transform transition-all duration-500 ease-in-out origin-left ${
-          menuOpen ? "translate-x-0 scale-100 opacity-100" : "-translate-x-full scale-90 opacity-0"
-        }`}
-      >
-        <div className="flex justify-between items-center px-6 py-4 border-b">
-          <h2 className="text-xl font-bold">Menu</h2>
-        </div>
-
-        <nav className="flex flex-col mt-6 space-y-5 px-6 text-lg font-medium">
-          <a href="#about" className="hover:text-green-600 transition duration-300">About</a>
-          <a href="#howitworks" className="hover:text-green-600 transition duration-300">How It Works</a>
-        </nav>
-      </div>
+     
 
       {/* Hero Section */}
       <div className="relative z-10 flex items-center justify-center h-screen px-6 md:px-20">
-        <div className="bg-black bg-opacity-70 p-8 rounded-xl max-w-md shadow-xl transform transition duration-500 hover:scale-105">
+        <img src={bgImage} className="absolute inset-0 w-full h-full object-cover  " alt="banner-img" />
+        {/* <div className="absolute inset-0 bg-black/40"></div> */}
+        <div className="bg-black bg-opacity-70 p-8 rounded-xl md:scale-105 max-w-md shadow-xl transform transition duration-500 md:hover:scale-110">
           <h2 className="text-4xl font-bold mb-4 animate-fadeInDown">Motion Script</h2>
           <p className="text-lg mb-6 text-gray-200 animate-fadeInUp">
             Transform your text into stunning videos effortlessly.
           </p>
-          <button className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-md font-semibold transition-transform duration-300 hover:scale-105">
+          <Link to={'/mvr'} className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-md font-semibold transition-transform duration-300 hover:scale-105 text-sm md:text-lg">
             Make your Vision Real
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -82,7 +57,7 @@ const Section1 = () => {
       </div>
 
       {/* About Section */}
-      <div id="about" className="bg-gray-100 text-black py-20">
+      {/* <div id="about" className="bg-gray-100 text-black py-20">
         <div className="max-w-6xl mx-auto px-6 md:px-20">
           <h2 className="text-4xl font-bold text-center mb-12">About Us</h2>
           <p className="text-lg leading-relaxed text-gray-700 mb-6">
@@ -96,10 +71,10 @@ const Section1 = () => {
             innovation.
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* How It Works Section */}
-      <div id="howitworks" className="bg-white text-black py-20">
+      {/* <div id="howitworks" className="bg-white text-black py-20">
         <div className="max-w-6xl mx-auto px-6 md:px-20">
           <h2 className="text-4xl font-bold text-center mb-12">How It Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -136,7 +111,7 @@ const Section1 = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
