@@ -20,10 +20,10 @@ const Section1 = () => {
      
 
       {/* Hero Section */}
-      <div className="relative z-10 flex items-center justify-center h-screen px-6 md:px-20">
-        <img src={bgImage} className="absolute inset-0 w-full h-full object-cover  " alt="banner-img" />
+      <div className="relative z-10 flex items-center justify-center h-screen px-6 md:px-20 bg-gradient-to-r from-black to-gray-900 text-white">
+        {/* <img src={bgImage} className="absolute inset-0 w-full h-full object-cover  " alt="banner-img" /> */}
         {/* <div className="absolute inset-0 bg-black/40"></div> */}
-        <div className="bg-black bg-opacity-70 p-8 rounded-xl md:scale-105 max-w-md shadow-xl transform transition duration-500 md:hover:scale-110">
+        <div className="bgblack bg-opacity-70 p-8 rounded-xl md:scale-105 max-w-md shadow-xl transform transition duration-500 md:hover:scale-110">
           <h2 className="text-4xl font-bold mb-4 animate-fadeInDown">Motion Script</h2>
           <p className="text-lg mb-6 text-gray-200 animate-fadeInUp">
             Transform your text into stunning videos effortlessly.

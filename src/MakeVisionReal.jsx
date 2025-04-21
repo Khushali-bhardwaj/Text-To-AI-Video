@@ -18,7 +18,7 @@ const MakeVisionReal = () => {
 
   return (
     <div className="relative w-full min-h-screen bg-gradient-to-r from-black to-gray-900 text-white flex items-center justify-center px-4">
-      <IoMdArrowRoundBack className="fixed top-0 mt-4"/>
+      {sentMsg && <IoMdArrowRoundBack className="absolute cursor-pointer top-0 left-0 mt-4 ml-2 md:ml-4 md:text-xl text-lg hover:scale-105" onClick={()=>setSentMsg('')}/>}
       {/* Full-screen Chat-style Card */}
       <div className="">
         <div className={`${sentMsg && 'hidden'}`}>
