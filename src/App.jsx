@@ -6,6 +6,7 @@ import Worksection from "./Worksection"; // import HowItWorksSection
 import MakeVisionReal from "./MakeVisionReal";
 import { Route, Routes } from "react-router";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/mvr" element={ <MakeVisionReal /> } />
        
       </Routes>
+      <Footer/>
     </div>
   );
 };

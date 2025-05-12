@@ -32,16 +32,11 @@ function Navbar() {
         }}></div>
       }
          {/* Navigation Bar */}
-      <div className=" z-10 flex justify-between items-center p-6 sticky top-0 left-0" onClick={()=>console.log("NAV CLICK")}>
+      <div className=" z-10 flex bg-white justify-between items-center p-6 sticky top-0 left-0" onClick={()=>console.log("NAV CLICK")}>
         <Link to={"/"} className="text-xl md:text-2xl font-bold tracking-wide transition-all duration-500 hover:scale-105 cursor-pointer">
           AI VIDEO GENERATOR
         </Link>
-        {/* <button
-          className=" text-3xl font-bold focus:outline-none transition-transform duration-300 hover:scale-110"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          &#9776;
-        </button> */}
+        
         <div className="items-center justify-center gap-4 hidden md:flex">
           {
             Navlinks.map(link=><Link to={link.href} className='text-lg lg:text-2xl font-medium hover:text-green-600 transition duration-300'>{link.name}</Link>)

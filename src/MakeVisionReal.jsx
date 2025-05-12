@@ -42,7 +42,7 @@ const MakeVisionReal = () => {
           />
           <button
             onClick={handleSend}
-            className="bg-green-600 text-white px-5 py-3 rounded-full font-medium hover:bg-green-700 transition-all duration-300"
+            className="bg-green-600 cursor-pointer text-white px-5 py-3 rounded-full font-medium hover:bg-green-700 transition-all duration-300"
           >
             Send
           </button>
